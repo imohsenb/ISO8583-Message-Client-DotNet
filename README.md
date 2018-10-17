@@ -29,7 +29,10 @@ ISOMessage isoMessage = ISOMessageBuilder.Packer(VERSION.V1987)
                 .SetField(FIELDS.F25_POS_ConditionCode, "12")
                 .SetField(FIELDS.F41_CA_TerminalID, "12345678")
                 .SetField(FIELDS.F42_CA_ID, "123456789876543")
-                .GenerateMac(new MAC())
+                .GenerateMac(data => {
+			byte[] mac = MacCalculator(data);
+			return mac;
+		})
                 .SetHeader("1234567890")
                 .Build();
 				
@@ -64,7 +67,7 @@ If you use Strings, taking memory dumps will be dangerous.
 #### Sending message to iso server
 Sending message to iso server and received response from server can be done with ISOClient in many ways:
 ```csharp
-ISOClient client = ISOClientBuilder.CreateSocket(HOST, PORT)
+IISOClient client = ISOClientBuilder.CreateSocket(HOST, PORT)
                 .Build();
 
         ISOMessage respIso = client.SendMessageSync(reqIso);
