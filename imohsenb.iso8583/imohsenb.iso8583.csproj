@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{58FB054F-687A-41AD-8819-187D99B23F64}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>imohsenb.iso8583</RootNamespace>
+    <AssemblyName>imohsenb.iso8583</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="builders\BaseMessageClassBuilder.cs" />
+    <Compile Include="builders\GeneralMessageClassBuilder.cs" />
+    <Compile Include="builders\ISOClientBuilder.cs" />
+    <Compile Include="builders\ISOMessageBuilder.cs" />
+    <Compile Include="clients\DefaultISOClient.cs" />
+    <Compile Include="clients\SslIsoClient.cs" />
+    <Compile Include="entities\ISOMessage.cs" />
+    <Compile Include="enums\FIELDS.cs" />
+    <Compile Include="enums\MESSAGE_FUNCTION.cs" />
+    <Compile Include="enums\MESSAGE_ORIGIN.cs" />
+    <Compile Include="enums\PC_ATC.cs" />
+    <Compile Include="enums\PC_TTC_100.cs" />
+    <Compile Include="enums\PC_TTC_200.cs" />
+    <Compile Include="enums\VERSION.cs" />
+    <Compile Include="exceptions\ISOException.cs" />
+    <Compile Include="interfaces\DataElement.cs" />
+    <Compile Include="interfaces\Financial.cs" />
+    <Compile Include="interfaces\IISOClient.cs" />
+    <Compile Include="interfaces\ISOClientEventListener.cs" />
+    <Compile Include="interfaces\ISOMacGenerator.cs" />
+    <Compile Include="interfaces\ISOMacGeneratorAsync.cs" />
+    <Compile Include="interfaces\MessageBuilder.cs" />
+    <Compile Include="interfaces\MessageClass.cs" />
+    <Compile Include="interfaces\MessagePacker.cs" />
+    <Compile Include="interfaces\ProcessCode.cs" />
+    <Compile Include="interfaces\UnpackMessage.cs" />
+    <Compile Include="interfaces\UnpackMethods.cs" />
+    <Compile Include="parsers\MessageParser.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="utils\Arrays.cs" />
+    <Compile Include="utils\ByteArray.cs" />
+    <Compile Include="utils\StringUtil.cs" />
+    <Compile Include="utils\TLVParser.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="parsers\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

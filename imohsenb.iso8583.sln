@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2002
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "imohsenb.iso8583", "imohsenb.iso8583\imohsenb.iso8583.csproj", "{58FB054F-687A-41AD-8819-187D99B23F64}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Iso8583Test", "Iso8583Test\Iso8583Test.csproj", "{27360965-0022-4629-AE1D-4ED46AACF7F1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{58FB054F-687A-41AD-8819-187D99B23F64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58FB054F-687A-41AD-8819-187D99B23F64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58FB054F-687A-41AD-8819-187D99B23F64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58FB054F-687A-41AD-8819-187D99B23F64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27360965-0022-4629-AE1D-4ED46AACF7F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27360965-0022-4629-AE1D-4ED46AACF7F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27360965-0022-4629-AE1D-4ED46AACF7F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27360965-0022-4629-AE1D-4ED46AACF7F1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0206F3C1-39C7-458A-966A-1B14E2C9B116}
+	EndGlobalSection
+EndGlobal

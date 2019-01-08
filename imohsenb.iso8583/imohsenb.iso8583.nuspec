@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>ISO8583 Lib</title>
+    <authors>Mohsen Beiranvand</authors>
+    <owners>Mohsen Beiranvand</owners>
+    <licenseUrl>https://github.com/imohsenb/ISO8583-Message-Client-DotNet/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/imohsenb/ISO8583-Message-Client-DotNet</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>ISO8583 Message Packer and UnPacker with ISOClient</description>
+    <releaseNotes>Add SSL Client</releaseNotes>
+    <copyright>Copyright 2018</copyright>
+    <tags>iso8583 iso-8583 pos</tags>
+  </metadata>
+</package>
