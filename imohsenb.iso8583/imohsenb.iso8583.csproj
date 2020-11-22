@@ -46,6 +46,8 @@
     <Compile Include="builders\ISOMessageBuilder.cs" />
     <Compile Include="clients\DefaultISOClient.cs" />
     <Compile Include="clients\SslIsoClient.cs" />
+    <Compile Include="crypto\Ansi919MacGenerator.cs" />
+    <Compile Include="crypto\Ansi99MacGenerator.cs" />
     <Compile Include="entities\ISOMessage.cs" />
     <Compile Include="enums\FIELDS.cs" />
     <Compile Include="enums\MESSAGE_FUNCTION.cs" />
@@ -74,9 +76,7 @@
     <Compile Include="utils\StringUtil.cs" />
     <Compile Include="utils\TLVParser.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="parsers\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
