@@ -101,7 +101,7 @@ namespace imohsenb.iso8583.parsers
             int len = Convert.ToInt32(
                 StringUtil.FromByteArray(Arrays.CopyOfRange(message, offset, offset + formatLength)));
 
-            if (fieldType.Equals("z"))
+            if (fieldType.Equals("n"))
                 len /= 2;
             
             offset = offset + formatLength;
